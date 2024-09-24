@@ -5,17 +5,11 @@ class Walker {
   }
 
   walk() {
-    let choice = floor(random(4));
+    const xStep = random(-1, 1) + 0.1;
+    const yStep = random(-1, 1) + 0.1;
 
-    if (choice === 0) {
-      this.x++;
-    } else if (choice === 1) {
-      this.x--;
-    } else if (choice === 2) {
-      this.y++;
-    } else {
-      this.y--;
-    }
+    this.x += xStep;
+    this.y += yStep;
   }
 
   show() {
